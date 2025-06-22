@@ -1,0 +1,3 @@
+Łatwy:5
+Standardowy:19
+Trudny:12
