@@ -52,13 +52,13 @@ snake_color = snake_colors[color_names[color_index]]
 
 highscores_file = "highscores.txt"
 if not os.path.exists(highscores_file):
-    with open(highscores_file, 'w') as f:
+    with open(highscores_file, 'w', encoding='utf-8', errors='ignore') as f:
         for level in difficulty_names:
             f.write(f"{level}:0\n")
 
 def load_highscores():
     scores = {name: 0 for name in difficulty_names}
-    with open(highscores_file, 'r') as f:
+    with open(highscores_file, 'r', encoding='utf-8', errors='ignore') as f:
         for line in f:
             try:
                 name, score = line.strip().split(":")
